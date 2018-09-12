@@ -8,5 +8,4 @@ outdir2=Split_Files_FolderUTR
 
 python file_splitter.py $indir $numFiles $outdir
 
-
 python file_splitter.py $indir2 $numFiles $outdir2

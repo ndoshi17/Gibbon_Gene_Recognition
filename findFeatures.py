@@ -1,4 +1,3 @@
-#I used the gibbon genus 1a chromosome for exons to start
 import numpy
 import sys
 import os
@@ -44,10 +43,10 @@ def main():
 			C_G =0
 			count =0		
 
-	#start
+	#start codons
 	atg_count = 0;
 	atg_arr = [];
-	#stop
+	#stop codons
 	uaa_count = 0;
 	uaa_arr = [];
 	uag_count = 0;

@@ -8,14 +8,6 @@ args <- commandArgs(trailingOnly = TRUE)
 posfile <- args[1]
 negfile <- args[2]
 
-###########################
-### Define Dataset Files: Hardcoded
-
-##Positive (Class 1) Dataset File
-#posfile <- "sample_datasets/tiny_dataset/pos.txt"
-
-##Negative (Class 0) Dataset File
-#negfile <- "sample_datasets/tiny_dataset/neg.txt"
 
 ###########################
 ### Read in data, set rownames to gene ids and remove that col
@@ -62,7 +54,7 @@ all_test_classes <- c(test_positive_class, test_negative_class)
 ###########################
 ### Prep the data for training and testing
 
-# we have to get rid of any features that have standard deviation of 0 for the model to run
+# Get rid of any features that have standard deviation of 0 for the model to run
 train_keep_logical <- !unlist(lapply(all_train, function(col){sd(col) == 0}))
 all_train <- all_train[ , train_keep_logical, drop = F]
 all_train_classes <- all_train_classes[train_keep_logical]
